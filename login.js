@@ -1,14 +1,15 @@
 const user = [
-  { username: "kamal", password: "k1234" },
-  { username: "kamal12", password: "k1234" },
+  { username: "kamal", password: "Kk12345678" },
+  { username: "kamal12", password: "Kk12345678" },
 ];
 
 function getInfo() {
   const username = document.getElementById("uname").value;
   const password = document.getElementById("psw").value;
+
   for (let i = 0; i < user.length; i++) {
     if (username == user[i].username && password == user[i].password) {
-      alert("login successfull");
+      location.assign("http://w3schools-fa.ir/jsref/met_loc_assign.html");
       return;
     } else {
       alert("doesnot match");
