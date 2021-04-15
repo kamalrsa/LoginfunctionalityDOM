@@ -6,7 +6,8 @@ body {
 
 html {
   font-size: 8px;
-  background-color: #8a8484;
+  background-color: #07a5e457;
+  background-image: url("background.jpg");
 }
 
 body {
@@ -24,7 +25,7 @@ h5,
 h6,
 h7 {
   font-family: "Cinzel Decorative", cursive;
-  color: #2a2a2a;
+  color: #5e0b0b;
   text-decoration: underline;
   font-size: 2rem;
 }
@@ -32,23 +33,16 @@ h7 {
 p,
 li {
   font-family: sans-serif;
-  color: #2a2a2a;
-  font-weight: bold;
+  color: hsl(0, 100%, 1%);
+
   text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: 3rem;
-  text-align: center;
   font-family: sans-serif;
-  text-decoration: none;
-}
-
-p,
-ul,
-li {
-  font-size: 1.6rem;
-  line-height: 1.5;
   text-decoration: none;
 }
 
@@ -65,7 +59,7 @@ header,
 nav,
 aside,
 footer {
-  background-color: rgb(174, 174, 180);
+  background-color: rgb(152, 185, 142);
   padding: 10px;
 }
 h1 {
@@ -73,10 +67,9 @@ h1 {
   font-size: 18;
 }
 
-header img {
-  display: block;
-  height: 100px;
-  padding-top: 20.15px;
+.profile_img {
+  margin-top: -120px;
+  float: right;
 }
 
 nav {
@@ -96,6 +89,8 @@ nav li {
   display: inline;
   text-align: center;
   flex: 1;
+  margin: 15px;
+  font-weight: bold;
 }
 nav a,
 nav span {
@@ -117,24 +112,7 @@ nav ul li a:hover {
   font-weight: bold;
   color: rgb(143, 12, 18);
 }
-/*pseudo-element in profile*/
-article p::first-line {
-  font-weight: bold;
-  color: rgb(5, 5, 2);
-}
 
-aside {
-  font-size: 14px;
-  float: right;
-  text-align: center;
-  width: 20%;
-  height: 300px;
-  font-size: 14px;
-  text-decoration-color: rgb(6, 7, 6);
-}
-.contact_info {
-  color: rgb(12, 5, 114);
-}
 table {
   border: 1px solid black;
   margin-left: 10rem;
@@ -145,4 +123,9 @@ table {
 footer {
   margin-top: 5px;
   text-align: center;
+}
+
+main ul {
+  font-size: 18px;
+  color: red;
 }
