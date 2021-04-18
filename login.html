@@ -26,8 +26,7 @@
         background-color: rgb(204, 231, 221);
       }
 
-      .button1 {
-        background-color: #718375;
+      button {
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -37,12 +36,9 @@
       }
       .button2 {
         background-color: #e77d5d;
-        color: white;
-        padding: 14px 20px;
-        margin: 4px 0;
-        border: none;
-        cursor: pointer;
-        width: 50%;
+      }
+      .button1 {
+        background-color: #718375;
       }
 
       button:hover {
@@ -54,17 +50,6 @@
       }
       .text {
         text-align: center;
-      }
-
-      /* Change styles for span and cancel button on extra small screens */
-      @media screen and (max-width: 300px) {
-        span.psw {
-          display: block;
-          float: none;
-        }
-        .cancelbtn {
-          width: 100%;
-        }
       }
     </style>
   </head>
@@ -102,6 +87,6 @@
         </button>
       </div>
     </form>
-    <script src="login.js"></script>
+    <script src="javascript/login.js"></script>
   </body>
 </html>
