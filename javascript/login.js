@@ -1,11 +1,12 @@
 const user = [];
+
 function newUser() {
   const signupUser = document.getElementById("newuname").value;
   const signupEmail = document.getElementById("email").value;
   const signupPassword = document.getElementById("newpsw").value;
   const newUser = {
     username: signupUser,
-    //email: signupEmail,
+    email: signupEmail,
     password: signupPassword,
   };
   let email_pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -28,13 +29,13 @@ function newUser() {
     console.log(user);
     alert("Registration Complete!!!");
   }
-  /* let headers = new Headers();
+  localStorage.setItem("item", JSON.stringify(user));
 
   /* headers.append("Content-Type", "application/x-www-form-urlencoded");
   headers.append("Authorization", val);
   headers.append("Origin", "http://localhost:3000");
  */
-  fetch("http://ec2-18-193-130-177.eu-central-1.compute.amazonaws.com/users", {
+  /* fetch("http://ec2-18-193-130-177.eu-central-1.compute.amazonaws.com/users", {
     method: "POST",
     body: JSON.stringify(user),
   })
@@ -44,14 +45,15 @@ function newUser() {
     })
     .catch((error) => {
       console.error("Error:", error);
-    });
+    }); */
 }
 function getInfo() {
   const username = document.getElementById("uname").value;
   const password = document.getElementById("psw").value;
-
-  for (let i = 0; i < user.length; i++) {
-    if (username == user[i].email && password == user[i].password) {
+  let userInfo = JSON.parse(localStorage.getItem("item"));
+  console.log(userInfo);
+  for (let i = 0; i < userInfo.length; i++) {
+    if (username == userInfo[i].email && password == userInfo[i].password) {
       window.location = "https://www.campuslife.co.in";
       return;
     } else {
