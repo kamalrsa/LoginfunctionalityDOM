@@ -5,7 +5,7 @@ function newUser() {
   const signupPassword = document.getElementById("newpsw").value;
   const newUser = {
     username: signupUser,
-    email: signupEmail,
+    //email: signupEmail,
     password: signupPassword,
   };
   let email_pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -28,6 +28,23 @@ function newUser() {
     console.log(user);
     alert("Registration Complete!!!");
   }
+  /* let headers = new Headers();
+
+  /* headers.append("Content-Type", "application/x-www-form-urlencoded");
+  headers.append("Authorization", val);
+  headers.append("Origin", "http://localhost:3000");
+ */
+  fetch("http://ec2-18-193-130-177.eu-central-1.compute.amazonaws.com/users", {
+    method: "POST",
+    body: JSON.stringify(user),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }
 function getInfo() {
   const username = document.getElementById("uname").value;
