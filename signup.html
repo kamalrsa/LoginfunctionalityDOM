@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="CSS/signup.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
     <meta
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
@@ -15,7 +17,7 @@
     <h2 class="text">Signup Form</h2>
     <form class="signup">
       <div class="container">
-        <label for="newuname"><b>Name</b></label>
+        <!-- <label for="newuname"><b>Name</b></label>
         <br />
         <input
           type="text"
@@ -23,24 +25,24 @@
           placeholder="Enter your name"
           name="newuname"
           required
-        />
+        /> -->
         <br />
         <label for="email">Email</label> <br />
         <input type="email" id="email" name="email" required />
 
-        <label for="newpsw"><b>Password</b></label
+        <label for="password"><b>Password</b></label
         ><br />
         <input
           type="password"
-          id="newpsw"
+          id="password"
           placeholder="Enter Password"
-          name="psw"
+          name="password"
           pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
           required
         />
 
-        <button type="button" class="button1" onclick="newUser()">
+        <button type="button" class="button1" onclick="signUp()">
           Register
         </button>
 
@@ -49,6 +51,10 @@
         </button>
       </div>
     </form>
-    <script src="javascript/login.js"></script>
+    <!-- <script src="javascript/login.js"></script> -->
+    <script src="javascript/loginfirebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script> -->
+    -->
   </body>
 </html>

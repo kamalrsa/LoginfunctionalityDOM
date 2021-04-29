@@ -4,7 +4,7 @@ body {
 }
 form {
   width: 300px;
-  height: 400px;
+  height: 450px;
   margin: auto;
   position: relative;
   border: 1px solid #f1f1f1;
@@ -40,7 +40,7 @@ button {
   width: 50%;
 }
 .button2 {
-  background-color: #e77d5d;
+  background-color: #825de7;
 }
 .button1 {
   background-color: #718375;
